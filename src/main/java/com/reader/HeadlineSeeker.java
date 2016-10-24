@@ -45,9 +45,9 @@ public class HeadlineSeeker {
 
 	public static void main(String[] args) {
 		HeadlineSeeker service = new HeadlineSeeker();
-		String result = service.readHTML("https://desafio-vote-no-restaurante.herokuapp.com/home");
-		List<String> titles = service.getContentInHeadline("h2", result);
-		System.out.println(titles.toString());
+		String result = service.readHTML("https://www.facebook.com/felipe.gouvea.7/photos?source_ref=pb_friends_tl");
+		//List<String> titles = service.getContentInHeadline("i", result);
+		//System.out.println(titles.toString());
 
 	}
 }
