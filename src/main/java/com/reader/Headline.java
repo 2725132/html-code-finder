@@ -1,13 +1,7 @@
 package com.reader;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.Enumeration;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
-import java.util.List;
-import java.util.Properties;
 import java.util.Set;
 
 import lombok.Data;
@@ -15,11 +9,11 @@ import lombok.Data;
 @Data
 public class Headline {
 	String symbol;
-	HashMap properties;
+	HashMap<Object, String> properties;
 
 	public Headline(String symbol) {
 		setSymbol(symbol);
-		properties = new LinkedHashMap();
+		properties = new LinkedHashMap<Object, String>();
 	}
 
 	public void addProperty(String key, String value) {
@@ -40,7 +34,6 @@ public class Headline {
 	}
 	
 	public String toString() {
-		StringBuilder result = new StringBuilder();
 		if (properties.isEmpty())
 			return symbol;
 		else
